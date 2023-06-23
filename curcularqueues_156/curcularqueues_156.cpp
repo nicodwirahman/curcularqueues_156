@@ -60,23 +60,33 @@ public:
 		}
 	}
 
-		void display() {
-			int FRONT_position = FRONT;
-			int REAR_position = REAR;
+	void display() {
+		int FRONT_position = FRONT;
+		int REAR_position = REAR;
 
-			//cek antrian kosong
-			if (FRONT == -1) {
-				cout << "queue is Empty\n";
-					return;
+		//cek antrian kosong
+		if (FRONT == -1) {
+			cout << "queue is Empty\n";
+			return;
+		}
+
+		cout << "\nElements is the queue are...\n";
+
+		//jika FRONT_position <= rear_position, literasi dari front hingga rear
+		if (FRONT_position <= REAR_position) {
+			while (FRONT_position <= REAR_position) {
+				cout << queue_array[FRONT_position] << " ";
+				FRONT_position++;
+			}
+			cout << endl;
+		}
+		else {
+			//jika FRONT_POSITION > REAR_position, iterasi dari pront hingga akhir array
+			while (FRONT_position <= max - 1) {
+				cout << queue_array[FRONT_position] << " ";
+				FRONT_position++;
+			}
+			cout << endl;
+		}
 	}
-
-			cout << "\nElements is the queue are...\n";
-
-			//jika FRONT_position <= rear_position, literasi dari front hingga rear
-			if (FRONT_position <= REAR_position) {
-				while (FRONT_position <= REAR_position) {
-					cout << queue_array[FRONT_position] << " ";
-					FRONT_position++;
-				}
-				cout << endl;
-				}
+};
