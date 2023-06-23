@@ -102,4 +102,10 @@ public:
 int main() {
 	queues q;
 	char ch;
+
+	while (true) {
+		try {
+
+		}
+	}
 }
