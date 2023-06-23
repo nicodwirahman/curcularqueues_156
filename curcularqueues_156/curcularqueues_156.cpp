@@ -8,5 +8,6 @@ class queues {
 public:
 	queues() {
 		FRONT = -1;
+		REAR = -1;
 	}
 };
